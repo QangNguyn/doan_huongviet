@@ -37,8 +37,8 @@
 
                             </div>
                             <!-- Form filter by price -->
-                            <form action="{{ route('shop.filter') }}" method="get" class="filter-form">
-
+                            <form action="{{ route('shop.filter') }}" method="GET" class="filter-form">
+                                {{-- @csrf --}}
                                 <h2>Lọc theo giá</h2>
                                 <div class="filter-form__form--range-price">
                                     <div class="range-price__progress"></div>
@@ -51,7 +51,13 @@
                                         name="max-range" min="0" max="30000000" step="100000" value="30000000" />
                                     <div class="range-price__text">
                                         <div class="text-min">0</div>
-                                        <div class="text-max">30.000.000</div>
+                                        <div class="text-max">
+                                            @if (request()->max_price)
+                                                {{ number_format(request()->max_price) }}
+                                            @else
+                                                {{ number_format(30000000) }}
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="submit">Lọc</button>
@@ -111,7 +117,9 @@
                                                             <h3 class="info__price">{{ $product->FormatSellingPrice() }}
                                                             </h3>
                                                         </div>
-                                                        <button>Thêm vào giỏ</button>
+                                                        <input type="hidden" readonly name="quantity" value="1">
+                                                        <button class="addToCartButton" data-id="{{ $product->id }}">Thêm
+                                                            vào giỏ</button>
                                                     </div>
                                                 @endforeach
                                             </div>

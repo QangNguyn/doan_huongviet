@@ -24,7 +24,7 @@ class FrontController extends Controller
         $sliders = Slider::all();
         $blogs = Blog::all();
         $productRans = Product::inRandomOrder()->take(2)->get();
-        $productTr = Product::where('trending', 'on')->take(12)->get();
+        $productTr = Product::where('trending', '1')->take(12)->get();
         $productLatest = Product::latest()->take(10)->get();
         $bestselling_products
             =
@@ -57,6 +57,7 @@ class FrontController extends Controller
             $PER_PAGE = 8;
             $productTr = Product::where('trending', '1')->take(4)->get();
             $cate = Category::where('slug', $slug)->first();
+            // dd($cate);
             $allCategories = Category::all();
             $products = $cate->products()->get();
 
@@ -67,7 +68,7 @@ class FrontController extends Controller
 
     public function viewCategoryFilter($slug, Request $request)
     {
-        dd($request);
+        // dd($request);
         $PER_PAGE = 8;
         $minPrice = $request->input('min_price');
 
@@ -81,9 +82,9 @@ class FrontController extends Controller
             $products =  $cate->products();
             $productTr = Product::where('trending', '1')->take(4)->get();
 
-            if ($minPrice && $maxPrice) {
-                $products->whereBetween('selling_price', [$minPrice, $maxPrice]);
-            }
+
+            $products->whereBetween('selling_price', [$minPrice, $maxPrice]);
+
 
             $products = $products->paginate($PER_PAGE);
 
@@ -173,7 +174,7 @@ class FrontController extends Controller
 
     public  function shopFilter(Request $request)
     {
-
+        // dd($request->input('min_price'));
         $PER_PAGE = 8;
         $productTr = Product::where('trending', '1')->take(4)->get();
 
@@ -186,9 +187,9 @@ class FrontController extends Controller
 
         $products = Product::query();
 
-        if ($minPrice && $maxPrice) {
-            $products->whereBetween('selling_price', [$minPrice, $maxPrice]);
-        }
+        // if ($minPrice && $maxPrice) {
+        $products->whereBetween('selling_price', [$minPrice, $maxPrice]);
+        // }
 
 
         // dd($products->get());
