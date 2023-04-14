@@ -1,0 +1,21 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import "helper/variable";
+@import "base/reset";
+@import "layouts/header";
+@import "layouts/footer";
+@import "page/home";
+@import "page/shop";
+@import "page/cart";
+@import "page/product-detail";
+@import "page/blog";
+@import "page/my-account";
+.swal2-popup {
+    font-size: 1.8rem !important;
+    width: 600px !important;
+    height: 400px !important;
+}
+
+.active {
+    font-weight: bold;
+}
