@@ -71,13 +71,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="single-form-3">
+                                <div class="single-form-3 pt-3 pb-3">
                                     <textarea name="message" placeholder="Massage" cols="30" rows="10" class="contact-massage">{{ old('massage') }}</textarea>
                                     @error('message')
                                         <div class="alert alert-danger my-2">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <button style="font-size:1.3rem;" type="submit" class="btn btn-primary p-4">Gửi tin
+                                <button style="font-size:1.3rem;" type="submit" class="btn btn-primary p-4 mb-3">Gửi tin
                                     nhắn</button>
                         </div>
                         </form>

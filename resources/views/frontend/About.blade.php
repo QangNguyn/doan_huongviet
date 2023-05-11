@@ -7,9 +7,9 @@
 
 
 @section('content')
-    <div class="py-5"></div>
-    <div class="container p-2 my-2">
-        {!! $aboutUs->content !!}
+    <div class="about-content" style="background: #242424; padding: 4rem 0; color: #fff;">
+        <div class="container" style="font-size: 1.6rem">
+            {!! $aboutUs->content !!}
+        </div>
     </div>
-    <div class="py-5"></div>
 @endsection
