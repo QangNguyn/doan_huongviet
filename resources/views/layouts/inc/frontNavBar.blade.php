@@ -6,19 +6,29 @@
                     <h4>Cửa hàng bán đồng hồ Hương Việt</h4>
                 </div>
                 <ul class="top-header__right">
-                    <li>
-                        <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i>Tài
-                            khoản</a>
-                        <ul>
-                            <li>
-                                <a href="{{ route('login') }}">Đăng nhập</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('register') }}">Đăng ký</a>
-                            </li>
+                    @if (!Auth::check())
+                        <li>
+                            <a href="{{ route('login') }}">Đăng nhập</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}">Đăng ký</a>
+                        </li>
+                    @else
+                        <li><a href="#">{{ Auth::user()->name }}</a>
+                            <ul>
+                                <li><a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">Đăng
+                                        xuất
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </a></li>
+                            </ul>
+                        </li>
+                    @endif
 
-                        </ul>
-                    </li>
                     <li>
                         <a href="#">Yêu thích</a>
                     </li>

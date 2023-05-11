@@ -6,6 +6,7 @@
     <div class="card">
         <div class="card-header">
             <h4>Bài viết</h4>
+            <a href="{{ route('blog.create') }}" class="btn btn-primary">Thêm bài viết</a>
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped table-fixed table-hover align-middle text-center">

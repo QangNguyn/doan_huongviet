@@ -6,6 +6,7 @@
     <div class="card">
         <div class="card-header">
             <h4>Danh mục</h4>
+            <a href="{{ url('add-category') }}" class="btn btn-primary">Thêm danh mục</a>
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped table-fixed table-hover align-middle text-center">
@@ -45,6 +46,4 @@
 @endsection
 
 @section('scripts')
-
-
 @endsection

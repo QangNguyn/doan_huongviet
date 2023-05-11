@@ -27,7 +27,7 @@
                                 <div class="blog-title">
                                     <h2>
                                         <a href="https://woodstock.temashdesign.me/watch/2016/02/20/oh-princess-leia-are-you-all-right/"
-                                            rel="bookmark">Oh, Princess Leia, are you all right?</a>
+                                            rel="bookmark">{{ $blog->name }}</a>
                                     </h2>
                                     <div class="blog-date d-inline-block icon-content">
                                         <a class="d-flex align-items-center" href="#">

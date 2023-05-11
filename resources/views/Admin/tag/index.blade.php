@@ -6,6 +6,7 @@
     <div class="card">
         <div class="card-header">
             <h4>Danh mục</h4>
+            <a href="{{ route('tag.create') }}" class="btn btn-primary">Thêm mới</a>
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped table-fixed table-hover align-middle text-center">
@@ -44,6 +45,4 @@
 @endsection
 
 @section('scripts')
-
-
 @endsection

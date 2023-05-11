@@ -5,7 +5,8 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4>Product Page</h4>
+            <h4>Sản phẩm</h4>
+            <a href="{{ url('add-product') }}" class="btn btn-primary">Thêm sản phẩm</a>
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped table-fixed table-hover align-middle text-center">
