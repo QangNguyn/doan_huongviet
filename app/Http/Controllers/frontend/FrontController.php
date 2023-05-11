@@ -24,7 +24,7 @@ class FrontController extends Controller
         $sliders = Slider::all();
         $blogs = Blog::all();
         $productRans = Product::inRandomOrder()->take(2)->get();
-        $productTr = Product::where('trending', '1')->take(12)->get();
+        $productTr = Product::where('trending', 1)->take(12)->get();
         $productLatest = Product::latest()->take(10)->get();
         $bestselling_products
             =

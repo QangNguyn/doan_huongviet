@@ -132,14 +132,11 @@
                             <img src="{{ $blog->image }}" alt="" />
                         </div>
                         <div class="news-item__info">
-                            <a href="#" class="item__title">
+                            <a href="{{ route('blogs.show', $blog->slug) }}" class="item__title">
                                 {{ $blog->name }}
                             </a>
                             <p class="item__time">
                                 <i class="fa-solid fa-calendar-days"></i> {{ $blog->created_at }}
-                            </p>
-                            <p class="item__comment">
-                                <i class="fa-solid fa-comment"></i>2 comments
                             </p>
                         </div>
                     </div>

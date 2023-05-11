@@ -48,7 +48,7 @@
                                                     <a href="{{ route('product.detail', $product->slug) }}"
                                                         class="info__name">{{ $product->name }}</a>
                                                     <h3 class="info__price">
-                                                        {{ number_format($product->original_price) . 'đ' }}</h3>
+                                                        {{ $product->FormatSellingPrice() }}</h3>
                                                 </div>
                                                 <button>Thêm vào giỏ</button>
                                             </div>

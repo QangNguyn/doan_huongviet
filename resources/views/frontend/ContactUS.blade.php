@@ -8,22 +8,7 @@
 
 @section('content')
     <!-- breadcrumbs-area-start -->
-    <div class="breadcrumbs-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs-menu">
-                        <ul class="d-flex">
-                            <li>
-                                <a href="#">Home<i class="fa-solid fa-chevron-right"></i></a>
-                            </li>
-                            <li><a href="#" class="active">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- breadcrumbs-area-end -->
 
     <div class="map">

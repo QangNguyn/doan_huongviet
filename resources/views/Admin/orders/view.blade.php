@@ -38,15 +38,15 @@
                                     <tbody>
                                         @foreach ($order->orderItems as $item)
                                             <tr>
-                                                <td> {{ $item->products->name }} </td>
+                                                <td> {{ $item->product->name }} </td>
                                                 <td> {{ $item->qty }} </td>
                                                 <td> {{ $item->price }} </td>
                                                 <td>
                                                     @php
-                                                        $thumbnails = explode(',', $item->products->image);
+                                                        $thumbnails = explode(',', $item->product->image);
                                                     @endphp
                                                     <img style="width: 100px ; height:100px;" src="{{ $thumbnails[0] }}"
-                                                        alt="{{ $item->products->name }}">
+                                                        alt="{{ $item->product->name }}">
                                                 </td>
                                             </tr>
                                         @endforeach

@@ -1050,6 +1050,10 @@ footer.copyright h2 {
     padding-left: 120px;
   }
 }
+.map {
+  background-color: #242424;
+}
+
 .product-detail {
   background-color: #242424;
   padding: 4rem 0;

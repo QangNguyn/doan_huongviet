@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Sản phẩm nổi bật</label>
-                        <input type="checkbox" class="border border-dark p-2" name="trending">
+                        <input type="checkbox" class="border border-dark p-2" value="1" name="trending">
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="">Meta Title</label>

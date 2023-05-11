@@ -12,7 +12,8 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="">Tên</label>
-                        <input value="{{old('name')}}" type="text"  class="form-control border border-dark p-2" name="name">
+                        <input value="{{ old('name') }}" type="text" class="form-control border border-dark p-2"
+                            name="name">
                         @error('name')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror
@@ -20,7 +21,8 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="">Slug</label>
-                        <input value="{{old('slug')}}" type="text" class="form-control border border-dark p-2" name="slug">
+                        <input value="{{ old('slug') }}" type="text" class="form-control border border-dark p-2"
+                            name="slug">
                         @error('slug')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror
@@ -28,7 +30,7 @@
 
                     <div class="col-md-12 mb-3">
                         <label for="">Mô tả ngắn</label>
-                        <textarea name="small_description" rows="3" class="form-control border border-dark form-check">{{old('small_description')}}</textarea>
+                        <textarea name="small_description" rows="3" class="form-control border border-dark form-check">{{ old('small_description') }}</textarea>
                         @error('small_description')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror
@@ -72,7 +74,8 @@
                         <select class="form-select border border-dark p-2" name="category_id">
                             <option>Chọn danh mục</option>
                             @foreach ($categories as $item)
-                                <option value="{{ $item->id }}"  @selected(old('category_id') == $item->id )>{{ $item->name }}</option>
+                                <option value="{{ $item->id }}" @selected(old('category_id') == $item->id)>{{ $item->name }}
+                                </option>
                                 @if ($item->children->count() > 0)
                                     @include('layouts.inc.sub', [
                                         'categories' => $item->children,
@@ -88,21 +91,24 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Giá gốc</label>
-                        <input value="{{old('original_price')}}" type="number" class="border form-control border-dark p-2" name="original_price">
+                        <input value="{{ old('original_price') }}" type="number"
+                            class="border form-control border-dark p-2" name="original_price">
                         @error('original_price')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Giá khuyến mại</label>
-                        <input value="{{old('selling_price')}}" type="number" class="border form-control border-dark p-2" name="selling_price">
+                        <input value="{{ old('selling_price') }}" type="number"
+                            class="border form-control border-dark p-2" name="selling_price">
                         @error('selling_price')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="">Số lượng</label>
-                        <input value="{{old('qty')}}" type="number" class="border form-control border-dark p-2" name="qty">
+                        <input value="{{ old('qty') }}" type="number" class="border form-control border-dark p-2"
+                            name="qty">
                         @error('qty')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror
@@ -110,9 +116,11 @@
 
                     <div class="col-md-6 mb-3">
                         <p>Trạng thái</p>
-                        <input type="radio" id="stocking" name="status" value="stocking" @if(old('status')== 'stocking') checked @endif>
+                        <input type="radio" id="stocking" name="status" value="stocking"
+                            @if (old('status') == 'stocking') checked @endif>
                         <label for="stocking">Còn hàng</label><br>
-                        <input type="radio" id="out_of_stock" @if(old('status') == 'out_of_stock') checked @endif name="status"  value="out_of_stock">
+                        <input type="radio" id="out_of_stock" @if (old('status') == 'out_of_stock') checked @endif
+                            name="status" value="out_of_stock">
                         <label for="out_of_stock">Hết hàng</label><br>
                         @error('status')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
@@ -120,7 +128,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Sản phẩm nổi bật</label>
-                        <input type="checkbox" class="border border-dark p-2" name="trending">
+                        <input type="checkbox" class="border border-dark p-2" name="trending" value="1">
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="">Meta Title</label>
