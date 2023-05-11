@@ -19,9 +19,8 @@
                         @enderror
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="">Slug</label>
                         <input type="text" value="{{ $tag->slug }}" class="form-control border border-dark p-2"
-                            name="slug">
+                            name="hidden">
                         @error('slug')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
                         @enderror

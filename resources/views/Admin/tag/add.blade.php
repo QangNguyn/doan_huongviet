@@ -20,7 +20,7 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="">Slug</label>
-                        <input value="{{ old('slug') }}" type="text" class="form-control border border-dark p-2"
+                        <input value="{{ old('slug') }}" type="hidden" class="form-control border border-dark p-2"
                             name="slug">
                         @error('slug')
                             <div class="alert alert-danger my-2">{{ $message }}</div>

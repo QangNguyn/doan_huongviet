@@ -6,7 +6,7 @@
             <h4>Chỉnh sửa bài viết</h4>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('blog.update',$blog->id) }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('blog.update', $blog->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Slug</label>
-                        <input value="{{  $blog->slug }}" type="text" class="form-control border border-dark form-check"
+                        <input value="{{ $blog->slug }}" type="hidden" class="form-control border border-dark form-check"
                             name="slug">
                         @error('slug')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
@@ -42,8 +42,7 @@
                                     </a>
                                 </span>
                                 <div id="holder" style="margin-top:15px;max-height:100%;">
-                                    <img src="{{ $blog->image }}" alt=""
-                                        style="margin-top:15px;max-width:100%;">
+                                    <img src="{{ $blog->image }}" alt="" style="margin-top:15px;max-width:100%;">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -69,8 +68,7 @@
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="">Tag</label>
-                        <select
-                            class="form-select form-control js-example-placeholder-single  js-example-templating"
+                        <select class="form-select form-control js-example-placeholder-single  js-example-templating"
                             multiple="multiple" name="tag_id[]">
                             @foreach ($tags as $tag)
                                 <option
@@ -86,29 +84,12 @@
                         <label for="">Lưu bản nháp</label>
                         <input type="checkbox" class="border border-dark p-2" name="is_draft">
                     </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Title</label>
-                        <input value="{{ old('meta_title') }}" type="text"
-                            class="form-control border border-dark form-check" name="meta_title">
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Keyword</label>
-                        <textarea name="meta_keyword" rows="3" class="form-control border border-dark form-check"></textarea>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Description</label>
-                        <textarea name="meta_description" rows="3" class="form-control border border-dark form-check"></textarea>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <button type="submit" class="btn btn-primary">Cập nhật</button>
-                    </div>
                 </div>
             </form>
         </div>
     </div>
 @endsection
 @section('scripts')
-
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script src="{{ asset('js/slug.js') }}"></script>

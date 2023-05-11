@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="">Slug</label>
-                        <input value="{{ old('slug') }}" type="text" class="form-control border border-dark form-check"
+                        <input value="{{ old('slug') }}" type="hidden" class="form-control border border-dark form-check"
                             name="slug">
                         @error('slug')
                             <div class="alert alert-danger my-2">{{ $message }}</div>
@@ -80,19 +80,6 @@
                     <div class="col-md-6 mb-3">
                         <label for="">Lưu bản nháp</label>
                         <input type="checkbox" class="border border-dark p-2" name="is_draft">
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Title</label>
-                        <input value="{{ old('meta_title') }}" type="text"
-                            class="form-control border border-dark form-check" name="meta_title">
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Keyword</label>
-                        <textarea name="meta_keyword" rows="3" class="form-control border border-dark form-check"></textarea>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Description</label>
-                        <textarea name="meta_description" rows="3" class="form-control border border-dark form-check"></textarea>
                     </div>
                     <div class="col-md-12 mb-3">
                         <button type="submit" class="btn btn-primary">Thêm mới</button>
