@@ -82,5 +82,8 @@
 @endsection
 
 @section('scripts')
-
+    <script>
+        var qty = {!! json_encode($product->qty) !!};
+        console.log(qty)
+    </script>
 @endsection
