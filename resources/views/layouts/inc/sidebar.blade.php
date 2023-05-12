@@ -30,30 +30,12 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('add-category') ? 'active' : '' }} "
-                    href="{{ url('add-category') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">add_circle</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Thêm mới danh mục</span>
-                </a>
-            </li>
-            <li class="nav-item ">
                 <a class="nav-link text-white {{ Request::is('products') ? 'active' : '' }} "
                     href="{{ url('products') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">inventory_2</i>
                     </div>
                     <span class="nav-link-text ms-1">Danh sách sản phẩm</span>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('add-product') ? 'active' : '' }} "
-                    href="{{ url('add-product') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">add_circle</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Thêm mới sản phẩm</span>
                 </a>
             </li>
 
@@ -67,15 +49,6 @@
                 </a>
             </li>
 
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('blog/create') ? 'active' : '' }} "
-                    href="{{ route('blog.create') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">add_circle</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Thêm mới bài viêt</span>
-                </a>
-            </li>
 
             <li class="nav-item ">
                 <a class="nav-link text-white {{ Request::is('tag') ? 'active' : '' }} "
@@ -84,55 +57,6 @@
                         <i class="material-icons opacity-10">more</i>
                     </div>
                     <span class="nav-link-text ms-1">Danh sách Tag</span>
-                </a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('tag/create') ? 'active' : '' }} "
-                    href="{{ route('tag.create') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">add_circle</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Thêm mới Tag</span>
-                </a>
-            </li>
-
-
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('slider') ? 'active' : '' }} "
-                    href="{{ route('slider.index') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">tune</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Danh sách Slider</span>
-                </a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('slider/create') ? 'active' : '' }} "
-                    href="{{ route('slider.create') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">add_circle</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Thêm mới Slider</span>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('about-us') ? 'active' : '' }} "
-                    href="{{ route('about-us.index') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">settings</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Về chúng tôi</span>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('setting/logo') ? 'active' : '' }} "
-                    href="{{ route('logo.edit') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">settings</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Cập nhật logo</span>
                 </a>
             </li>
 
@@ -146,15 +70,6 @@
                 </a>
             </li>
 
-            <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('setting/create') ? 'active' : '' }} "
-                    href="{{ route('setting.create') }}">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">add_circle</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Thêm mới cấu hình</span>
-                </a>
-            </li>
 
             <li class="nav-item ">
                 <a class="nav-link text-white {{ Request::is('orders') ? 'active' : '' }} "
@@ -166,8 +81,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link text-white {{ Request::is('users') ? 'active' : '' }} "
-                    href="{{ url('users') }}">
+                <a class="nav-link text-white {{ Request::is('users') ? 'active' : '' }} " href="{{ url('users') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">group</i>
                     </div>
