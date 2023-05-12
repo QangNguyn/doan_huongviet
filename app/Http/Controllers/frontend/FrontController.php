@@ -40,13 +40,14 @@ class FrontController extends Controller
         $productSales = DB::table('products')
             ->whereIn('id', $productIds)
             ->get();
-        $categories = Category::where('parent_id', 0)->get();
+        $categories = Category::where('parent_id', 0)->take(4)->get();
         // dd($productSales);
 
         return view('frontend.home', compact('productTr', 'productLatest', 'sliders', 'productRans', 'blogs', 'categories', 'productSales'));
     }
     public function category()
     {
+
         $category = Category::where('status', '0')->get();
         return view('frontend.category', compact('category'));
     }

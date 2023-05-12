@@ -51,7 +51,7 @@ class CheckoutController extends Controller
             ]);
 
             $prod  = Product::where('id', $item->id)->first();
-            $prod->qty = $prod->qty - $item->prod_qty;
+            $prod->qty = $prod->qty - $item->qty;
             $prod->update();
         }
         $adminMail = config('mail.admins');

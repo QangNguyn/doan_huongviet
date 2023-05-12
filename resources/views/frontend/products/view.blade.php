@@ -42,7 +42,8 @@
                                 <button class="addToCartButton d-block" data-id="{{ $product->id }}" <i
                                     class="fa fa-shopping-cart"></i>
                                     thêm vào giỏ hàng
-                                </button><span style="font-size: 1.4rem">Có sẵn {{ $product->qty }} sản phẩm</span>
+                                </button><span style="font-size: 1.4rem; display: inline-block; margin-left: 2rem;">Có sẵn
+                                    {{ $product->qty }} sản phẩm</span>
                             </div>
 
                         </div>
