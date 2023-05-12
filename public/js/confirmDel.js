@@ -10,7 +10,6 @@ function confirmDelete(id) {
         cancelButtonText: "Không, hủy bỏ!",
     }).then((result) => {
         if (result.isConfirmed) {
-            console.log(id);
             document.querySelector(`.delete-form-${id}`).submit();
         }
     });

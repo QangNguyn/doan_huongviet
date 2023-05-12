@@ -38,11 +38,11 @@
 
                             <div class="button-wrap">
                                 <label for="">Số lượng: </label>
-                                <input type="number" min="1" value="1" />
+                                <input type="number" min="1" value="1" id="count" />
                                 <button class="addToCartButton d-block" data-id="{{ $product->id }}" <i
                                     class="fa fa-shopping-cart"></i>
                                     thêm vào giỏ hàng
-                                </button>
+                                </button><span style="font-size: 1.4rem">Có sẵn {{ $product->qty }} sản phẩm</span>
                             </div>
 
                         </div>
@@ -83,7 +83,23 @@
 
 @section('scripts')
     <script>
-        var qty = {!! json_encode($product->qty) !!};
-        console.log(qty)
+        var qty = {{ json_encode($product->qty) }};
+        let countInput = document.querySelector('#count');
+        countInput.addEventListener('input', () => {
+            if (countInput.value > qty) {
+                // alert(`Trong kho chỉ còn ${qty} sản phẩm`)
+                Swal.fire({
+                    title: "Số lượng không đủ",
+                    text: `Trong kho chúng tôi chỉ còn ${qty} sản phẩm`,
+                    icon: "warning",
+                    showCancelButton: false,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Xác nhận",
+                    cancelButtonText: "Không, hủy bỏ!",
+                })
+                countInput.value = qty;
+            }
+        })
     </script>
 @endsection
