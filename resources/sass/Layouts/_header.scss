@@ -73,6 +73,9 @@ header {
             align-items: center;
             justify-content: space-between;
             .center-header__search {
+                form {
+                    position: relative;
+                }
                 flex: 1;
                 input {
                     background-color: transparent;
@@ -83,6 +86,15 @@ header {
                     font-size: 1.6rem;
                     border-radius: 10px;
                     border: 2px solid rgba(255, 255, 255, 0.5);
+                }
+                button {
+                    position: absolute;
+                    font-size: 20px;
+                    border: none;
+                    top: 12px;
+                    left: 318px;
+                    color: #fff;
+                    background-color: transparent;
                 }
             }
             .center-header__logo {

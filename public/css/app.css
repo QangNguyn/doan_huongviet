@@ -173,6 +173,9 @@ header .center-header--wrap {
 header .center-header--wrap .center-header__search {
   flex: 1;
 }
+header .center-header--wrap .center-header__search form {
+  position: relative;
+}
 header .center-header--wrap .center-header__search input {
   background-color: transparent;
   outline: none;
@@ -182,6 +185,15 @@ header .center-header--wrap .center-header__search input {
   font-size: 1.6rem;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.5);
+}
+header .center-header--wrap .center-header__search button {
+  position: absolute;
+  font-size: 20px;
+  border: none;
+  top: 12px;
+  left: 318px;
+  color: #fff;
+  background-color: transparent;
 }
 header .center-header--wrap .center-header__logo {
   text-align: center;

@@ -10,7 +10,7 @@
         <div class="container">
             <ul>
                 <li>
-                    <a href="index.html">Trang chủ<i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="{{ route('home') }}">Trang chủ<i class="fa-solid fa-chevron-right"></i></a>
                 </li>
                 <li><a href="">Giỏ hàng</a></li>
             </ul>

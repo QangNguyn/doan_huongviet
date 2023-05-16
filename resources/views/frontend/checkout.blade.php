@@ -9,7 +9,7 @@
         <div class="container">
             <ul>
                 <li>
-                    <a href="index.html">Trang chủ<i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="{{ route('home') }}">Trang chủ<i class="fa-solid fa-chevron-right"></i></a>
                 </li>
                 <li><a href="#">Thông tin đặt hàng</a></li>
             </ul>

@@ -71,7 +71,8 @@
                                 <h3 class="info__price">{{ $product->FormatSellingPrice() }}</h3>
                             </div>
                             <input type="hidden" readonly name="quantity" value="1">
-                            <button class="addToCartButton" data-id="{{ $product->id }}">Thêm vào giỏ</button>
+                            <button class="addToCartButton" data-id="{{ $product->id }}">Thêm vào
+                                giỏ</button>
                         </div>
                     @endforeach
 
@@ -100,6 +101,19 @@
                     cancelButtonText: "Không, hủy bỏ!",
                 })
                 countInput.value = qty;
+            }
+            if (countInput.value < 0) {
+                Swal.fire({
+                    title: "Số lượng không hợp lệ",
+                    text: `Vui lòng kiểm tra lại số lượng`,
+                    icon: "warning",
+                    showCancelButton: false,
+                    confirmButtonColor: "#d33",
+                    cancelButtonColor: "#3085d6",
+                    confirmButtonText: "Xác nhận",
+                    cancelButtonText: "Không, hủy bỏ!",
+                })
+                countInput.value = 1;
             }
         })
     </script>
