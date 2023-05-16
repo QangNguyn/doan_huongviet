@@ -28,10 +28,11 @@
                             </ul>
                         </li>
                     @endif
-
+                    @if(Auth::check())
                     <li>
-                        <a href="#">Yêu thích</a>
+                        <a href="{{route('my-order')}}">Đơn hàng của tôi</a>
                     </li>
+                    @endif
                     <li>
                         <a href="{{ route('cart') }}">Giỏ hàng</a>
                     </li>

@@ -1,6 +1,6 @@
 @extends('layouts.customer')
 @section('title')
-    My Orders
+   Đơn hàng của tôi
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
 
     <div class="container ">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="min-height:600px;font-size:2rem">
                 <div class="card p-4">
                     <div class="card-head">
                         <h4>Đơn hàng của tôi</h4>
@@ -22,7 +22,7 @@
                                     <th>Mã số đơn hàng</th>
                                     <th>Tổng giá</th>
                                     <th>Trạng thái</th>
-                                    <th>Action</th>
+                                    <th>Hành động</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,7 +32,13 @@
                                         <td> {{ $item->total_price }}</td>
                                         <td> {{ $item->status == '0' ? 'Đang vận chuyển' : 'Đã giao hàng' }} </td>
                                         <td>
-                                            <a href="{{ url('don-hang/' . $item->id) }}" class="btn btn-outline-info">View</a>
+                                            <a href="{{ url('don-hang/' . $item->id) }}" class="btn btn-outline-info d-inline-block px-4 py-3 fs-4 me-3">Xem</a>
+                                           @if ($item->status == 0)
+                                            <a href="{{route('remove-order',$item->id)}}" class="btn btn-outline-info d-inline-block px-4 py-3 fs-4">Hủy</a>
+                                           @else
+
+                                           @endif
+
                                         </td>
                                     </tr>
                                 @endforeach

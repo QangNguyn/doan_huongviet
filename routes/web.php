@@ -70,12 +70,14 @@ Route::post('sendMessage', [contactComplains::class,  'submitForm'])->name('cont
 // Route::view('about', 'frontend.About')->name('about');
 
 Route::get('cart', [CartController::class, 'viewCart'])->name('cart');
-Route::get('thanh-toan', [CheckoutController::class, 'index'])->name('checkout');
-Route::post('place-order', [CheckoutController::class, 'placeOrder']);
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('don-hang', [UserController::class, 'index'])->name('my-order');
+
+    Route::get('thanh-toan', [CheckoutController::class, 'index'])->name('checkout');
+    Route::post('place-order', [CheckoutController::class, 'placeOrder']);
+    Route::get('don-hang-cua-toi', [UserController::class, 'index'])->name('my-order');
     Route::get('don-hang/{id}', [UserController::class, 'viewOrder'])->name('view-order');
+    Route::get('xoa-don-hang/{id}', [UserController::class, 'removeOrder'])->name('remove-order');
 });
 
 
@@ -137,7 +139,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::put('settings/logo/update', [SettingLogoController::class, 'updateLogo'])->name('logo.update');
     Route::resource('/setting', SettingController::class);
 
-    //About Us Route 
+    //About Us Route
     Route::resource('/about-us', AboutUsController::class);
 });
 
