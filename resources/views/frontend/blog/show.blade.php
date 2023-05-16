@@ -106,7 +106,7 @@
                                 <h2>Tags</h2>
                                 <ul class="tag-list">
                                     @foreach ($tags as $tag)
-                                        <a href="#">{{ $tag->name }}</a>
+                                    <a href="{{route('Tags.show',$tag->slug)}}">{{ $tag->name }}</a>
                                     @endforeach
                                 </ul>
                             </div>
