@@ -28,7 +28,8 @@ class CartController extends Controller
             'qty' => $product_qty,
             'weight' => 0,
             'options' => [
-                'image' =>  $thumbnails[0]
+                'image' =>  $thumbnails[0],
+                'max_qty'=>$product->qty
             ]
         ]);
 

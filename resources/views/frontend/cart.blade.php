@@ -49,7 +49,7 @@
                                                         <span>{{ $item->price }}</span>
                                                     </td>
                                                     <td class="cart-table--quality"><input type="number"
-                                                            value="{{ $item->qty }}" min="1"></td>
+                                                            value="{{ $item->qty }}" min="1" max="{{ $item->options['max_qty'] }}"></td>
                                                     <td class="cart-table--total">
                                                         <span>{{ $item->price * $item->qty }}</span>
                                                     </td>
