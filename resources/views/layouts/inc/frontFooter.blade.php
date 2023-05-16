@@ -7,9 +7,8 @@
                      <span>Watch store</span>
                  </div>
                  <div class="footer__slogan">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas praesentium rem sunt, accusantium
-                     doloribus ipsa ea tempore ab delectus, error maiores aperiam! Nam sit consequatur animi voluptatem.
-                     Voluptatum, delectus possimus?
+                     Cửa hàng Hương Việt là một trong những cửa hàng bán đồng hồ đầu tiên tại Hà Nội, cửa hàng chuyên
+                     cung cấp các loại đồng hồ nam, nữ
                  </div>
              </div>
              <div class="col-3">

@@ -639,6 +639,15 @@ footer.copyright h2 {
   top: -5px;
 }
 
+.pagination li span,
+.pagination li a {
+  font-size: 1.6rem;
+  background: transparent;
+  color: #fff;
+  display: block;
+  margin-right: 1rem;
+}
+
 .shop-container {
   background-color: #242424;
   padding: 4rem 0;
@@ -1504,6 +1513,37 @@ input[type=number] {
 
 .icon-content p {
   margin-left: 5px;
+}
+
+.blog-main-area {
+  background: #242424;
+  padding: 4rem 0;
+}
+.blog-main-area .name-tag h2 {
+  color: #fff;
+  font-size: 3.6rem;
+  padding: 2rem 0;
+}
+.blog-main-area .blog-img {
+  width: 100%;
+}
+.blog-main-area .blog-img a {
+  display: block;
+  width: 100%;
+}
+.blog-main-area .blog-img a img {
+  width: 100%;
+}
+.blog-main-area .single-blog-content .single-blog-title {
+  padding: 1.8rem 0;
+}
+.blog-main-area .single-blog-content .single-blog-title h3 a {
+  color: #fff;
+}
+.blog-main-area .blog-single-content p {
+  padding: 0 0 3rem 0;
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 .my-account-container {

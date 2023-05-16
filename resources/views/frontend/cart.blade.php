@@ -49,7 +49,8 @@
                                                         <span>{{ $item->price }}</span>
                                                     </td>
                                                     <td class="cart-table--quality"><input type="number"
-                                                            value="{{ $item->qty }}" min="1" max="{{ $item->options['max_qty'] }}"></td>
+                                                            value="{{ $item->qty }}" min="1"
+                                                            max="{{ $item->options['max_qty'] }}"></td>
                                                     <td class="cart-table--total">
                                                         <span>{{ $item->price * $item->qty }}</span>
                                                     </td>
@@ -116,5 +117,37 @@
 
 
 @section('scripts')
-    <script></script>
+    <script>
+        let array = document.querySelectorAll('input[type="number"]');
+        array.forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value > parseInt(input.getAttribute('max'))) {
+                    Swal.fire({
+                        title: "Số lượng không đủ",
+                        text: `Trong kho chúng tôi chỉ còn ${parseInt(input.getAttribute('max'))} sản phẩm`,
+                        icon: "warning",
+                        showCancelButton: false,
+                        confirmButtonColor: "#d33",
+                        cancelButtonColor: "#3085d6",
+                        confirmButtonText: "Xác nhận",
+                        cancelButtonText: "Không, hủy bỏ!",
+                    })
+                    input.value = parseInt(input.getAttribute('max'));
+                }
+                if (input.value < 0) {
+                    Swal.fire({
+                        title: "Số lượng không hợp lệ",
+                        text: `Vui lòng kiểm tra lại số lượng`,
+                        icon: "warning",
+                        showCancelButton: false,
+                        confirmButtonColor: "#d33",
+                        cancelButtonColor: "#3085d6",
+                        confirmButtonText: "Xác nhận",
+                        cancelButtonText: "Không, hủy bỏ!",
+                    })
+                    input.value = 1;
+                }
+            })
+        })
+    </script>
 @endsection
