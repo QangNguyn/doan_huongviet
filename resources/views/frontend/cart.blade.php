@@ -83,10 +83,8 @@
                                             <div class="shipping-right">
 
                                                 <div>
-                                                    <input type="checkbox" id="freeship">
                                                     <label for="freeship">Miễn phí giao hàng</label>
                                                 </div>
-                                                <div>Chi phí vận chuyển</div>
                                             </div>
 
                                         </div>

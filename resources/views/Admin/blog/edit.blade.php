@@ -84,6 +84,10 @@
                         <label for="">Lưu bản nháp</label>
                         <input type="checkbox" class="border border-dark p-2" name="is_draft">
                     </div>
+
+                    <div class="col-md-12 mb-3">
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    </div>
                 </div>
             </form>
         </div>

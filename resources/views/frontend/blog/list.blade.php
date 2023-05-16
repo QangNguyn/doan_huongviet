@@ -33,10 +33,10 @@
                                         </div>
                                         <div class="blog-content text-white">
                                             <p>
-                                                {!! $blog->content !!}
+                                                {{ $blog->description }}
                                             </p>
                                         </div>
-                                        <a class="read-more" href="{{ route('blogs.show', $blog->slug) }}">Continue reading
+                                        <a class="read-more" href="{{ route('blogs.show', $blog->slug) }}">Đọc tiếp
                                             →</a>
                                     </div>
                                 @endforeach
