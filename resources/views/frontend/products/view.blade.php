@@ -38,7 +38,8 @@
 
                             <div class="button-wrap">
                                 <label for="">Số lượng: </label>
-                                <input type="number" min="1" value="1" id="count" />
+                                <input type="number" min="1" value="1" max="{{ $product->qty }}"
+                                    id="count" />
                                 <button class="addToCartButton d-block" data-id="{{ $product->id }}" <i
                                     class="fa fa-shopping-cart"></i>
                                     thêm vào giỏ hàng
@@ -85,8 +86,8 @@
 
 @section('scripts')
     <script>
-        var qty = {{ json_encode($product->qty) }};
         let countInput = document.querySelector('#count');
+        let qty = parseInt(countInput.getAttribute('max'));
         countInput.addEventListener('input', () => {
             if (countInput.value > qty) {
                 // alert(`Trong kho chỉ còn ${qty} sản phẩm`)

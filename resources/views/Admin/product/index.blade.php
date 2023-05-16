@@ -13,11 +13,11 @@
                 <thead class="table-dark">
                     <tr>
                         <th>Id</th>
-                        <th>Category</th>
-                        <th>Name</th>
-                        <th>Selling Price</th>
-                        <th>Image</th>
-                        <th>Action</th>
+                        <th>Danh mục</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Hình ảnh</th>
+                        <th>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
