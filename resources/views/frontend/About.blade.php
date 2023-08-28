@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Về chúng tôi ytỏhákfhsdkjfskjfhákfhsl dsađấ
+    Về chúng tôi ytỏhákfhsdkjfskjfhákfhsl dsađấ sa dhsáhdkfhskdfhaksd
 @endsection
 
 
